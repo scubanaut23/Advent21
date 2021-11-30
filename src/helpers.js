@@ -1,0 +1,208 @@
+/* shuffle function to shuffle the items of an array */
+
+const shuffle = (a) => {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
+
+// Array component (the door images and the pictures as objects)
+
+export const hatchArray = [
+  {
+    id: 'hatch-1',
+    nr: 1,
+    img: './img/cat.jpg',
+    text: 'Es kommt nicht darauf an, wie lange man wartet, sondern auf wen.',
+    author: '(Manche mögen’s heiß, 1959)',
+    open: false,
+  },
+  {
+    id: 'hatch-2',
+    nr: 2,
+    img: './img/street.jpg',
+    text: 'Wenn man begriffen hat, dass man den Rest des Lebens zusammen verbringen will, dann will man das der Rest des Lebens so schnell wie möglich beginnt.',
+    author: '(Harry und Sally, 1989)',
+    open: false,
+  },
+  {
+    id: 'hatch-3',
+    nr: 3,
+    img: './img/gesicht.jpg',
+    text: 'Ich bin nichts besonderes. Er ist nichts besonderes. Zusammen sind wir was',
+    author: '(Real Love, 1993)',
+    open: false,
+  },
+  {
+    id: 'hatch-4',
+    nr: 4,
+    img: './img/bus.jpg',
+    text: 'Die Gewissheit jemanden so zu lieben, die hast du nur einmal im Leben.',
+    author: '(Die Brücken am Fluss, 1995)',
+    open: false,
+  },
+  {
+    id: 'hatch-5',
+    nr: 5,
+    img: './img/matze-bob-3vXxcVX_heQ-unsplash.jpg',
+    text: 'Meines Herzens, teure Liebe. Werd ich schwören, dir meine Liebste, dich zu lieben, solange ich lebe!',
+    author: '(William Shakespeares Romeo + Julia, 1996)',
+    open: false,
+  },
+  {
+    id: 'hatch-6',
+    nr: 6,
+    img: './img/nick-fewings-ka7REB1AJl4-unsplash.jpg',
+    text: 'Deinetwegen möchte ich ein besserer Mensch sein',
+    author: '(Besser geht’s nicht, 1997)',
+    open: false,
+  },
+  {
+    id: 'hatch-7',
+    nr: 7,
+    img: './img/tim-hufner-9qBSeAN9vps-unsplash.jpg',
+    text: 'Wenn ich gefragt werde, was mir am besten gefallen hat, dann sag ich, das warst du.',
+    author: '(Stadt der Engel, 1998)',
+    open: false,
+  },
+  {
+    id: 'hatch-8',
+    nr: 8,
+    img: './img/nick-fewings-3SgLhQTdG-o-unsplash.jpg',
+    text: 'Kein Hindernis aus Stein hält Liebe auf, was Liebe kann das wagt sie auch',
+    author: '(William Shakespeares Romeo + Julia, 1996)',
+    open: false,
+  },
+  {
+    id: 'hatch-9',
+    nr: 9,
+    img: './img/crawford-jolly-tMUCzU_ThOw-unsplash.jpg',
+    text: 'Kein Hindernis aus Stein hält Liebe auf, was Liebe kann das wagt sie auch',
+    author: '(William Shakespeares Romeo + Julia, 1996)',
+    open: false,
+  },
+  {
+    id: 'hatch-10',
+    nr: 10,
+    img: './img/nick-fewings-sd7dVZhqFYw-unsplash.jpg',
+    text: 'Du vervollständigst mich.',
+    author: '(Jerry Maguire, 1996)',
+    open: false,
+  },
+  {
+    id: 'hatch-11',
+    nr: 11,
+    img: './img/ana-khutsishvili-qh03JBEO0UI-unsplash.jpg',
+    text: 'Bis zum heutigen Tag konnte ich mir nicht vorstellen, dass ein Mann mit einer einzigen Frau glücklich sein kann',
+    author: '(Anna und der König, 1999)',
+    open: false,
+  },
+  {
+    id: 'hatch-12',
+    nr: 12,
+    img: './img/marloes-hilckmann-40l3zKiOC8k-unsplash.jpg',
+    text: 'Vergiss nicht, ich bin auch nur ein Mädchen,das vor einem Jungen steht und ihn bittet, es zu lieben',
+    author: '(Notting Hill, 1999)',
+    open: false,
+  },
+  {
+    id: 'hatch-13',
+    nr: 13,
+    img: './img/crawford-jolly--gFxMygtgsg-unsplash.jpg',
+    text: 'Ohne dich wären die Gefühle von heute nur die leere Hülle der Gefühle von damals',
+    author: '(Die fabelhafte Welt der Amelie, 2001)',
+    open: false,
+  },
+  {
+    id: 'hatch-14',
+    nr: 14,
+    img: './img/uriel-soberanes-RWCF3DxX-28-unsplash.jpg',
+    text: 'Die große Liebe zu treffen, ist eine Sache. Sie wieder zu finden, eine ganz andere',
+    author: '(Weil es dich gibt, 2001)',
+    open: false,
+  },
+  {
+    id: 'hatch-15',
+    nr: 15,
+    img: './img/tim-hufner-Ueuk1V9mXQQ-unsplash.jpg',
+    text: 'Du bist mein Herz, Kleines. Könnte ich ohne mein Herz leben?',
+    author: '(Blow, 2001)',
+    open: false,
+  },
+  {
+    id: 'hatch-16',
+    nr: 16,
+    img: './img/monsterin.jpg',
+    text: 'Kein Mensch ist austauschbar. Jeder besteht aus wunderschönen kleinen Details',
+    author: '(Before Sunset, 2004)',
+    open: false,
+  },
+  {
+    id: 'hatch-17',
+    nr: 17,
+    img: './img/panda.jpg',
+    text: 'Sag mir was ich sein soll und ich bin es für Dich.',
+    author: '(Wie ein einziger Tag, 2004)',
+    open: false,
+  },
+  {
+    id: 'hatch-18',
+    nr: 18,
+    img: './img/pascal-bernardon-j_uEuqFVg-Y-unsplash.jpg',
+    text: 'Die Geschichte prägt nur einen Moment, die Liebe dagegen ein ganzes Leben.',
+    author: '(Wie ein einziger Tag, 2004)',
+    open: false,
+  },
+  {
+    id: 'hatch-19',
+    nr: 19,
+    img: './img/mika-baumeister-pAETg171Oi0-unsplash.jpg',
+    text: 'Ich sehe dich.',
+    author: '(Avatar, 2009)',
+    open: false,
+  },
+  {
+    id: 'hatch-20',
+    nr: 20,
+    img: './img/26pigeons-AyJDZLFfebc-unsplash.jpg',
+    text: 'Unsere Liebe ist stärker als der Tot',
+    author: '(Bram Stokers Dracula, 1992)',
+    open: false,
+  },
+  {
+    id: 'hatch-21',
+    nr: 21,
+    img: './img/Heldin.jpg',
+    text: 'Dein Herz ist frei, hab den Mut ihm zu folgen.',
+    author: '(Braveheart, 1995',
+    open: false,
+  },
+  {
+    id: 'hatch-22',
+    nr: 22,
+    img: './img/etienne-girardet-CxTCcjUo2hM-unsplash.jpg',
+    text: 'Ich habe Dich mehr geliebt, als irgendeine Frau jemals ein Kaninchen geliebt hat!',
+    author: '(Falsches Spiel mit Roger Rabbit, 1988)',
+    open: false,
+  },
+  {
+    id: 'hatch-23',
+    nr: 23,
+    img: './img/diana-cszeo3eugBI-unsplash.jpg',
+    text: 'Küss mich! Küss mich als wäre es das letzte Mal!',
+    author: '(Bonny und Clyde, 1967)',
+    open: false,
+  },
+  {
+    id: 'hatch-24',
+    nr: 24,
+    img: './img/comics1.jpg',
+    text: 'Ich liebe dich MegaNinjahasisalzkaramelltotalextremterrasehr',
+    author: '(The Reality, 2019 til eternity)',
+    open: false,
+  },
+];
+
+export const createCalendar = () => shuffle(hatchArray);
